@@ -1,7 +1,7 @@
 local Library = {}
 
--- Define CreateMainFrame as a method of Library
-function Library.CreateMainFrame(self, properties)
+-- Attach CreateMainFrame to the Library table
+function Library:CreateMainFrame(properties)
     -- Main Frame
     local frame = Instance.new("Frame")
     frame.Name = properties.Name or "MainFrame"
@@ -105,5 +105,7 @@ function Library.Button:Create(properties)
 
     return button
 end
+
+print("Library loaded!") -- Debug message
 
 return Library
