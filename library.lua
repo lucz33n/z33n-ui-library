@@ -1,6 +1,6 @@
 local Library = {}
 
--- Function to create a draggable GUI with a top bar
+-- Define CreateMainFrame as a method of Library
 function Library:CreateMainFrame(properties)
     -- Main Frame
     local frame = Instance.new("Frame")
