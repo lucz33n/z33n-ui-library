@@ -1,7 +1,7 @@
 local Library = {}
 
 -- Define CreateMainFrame as a method of Library
-function Library:CreateMainFrame(properties)
+function Library.CreateMainFrame(self, properties)
     -- Main Frame
     local frame = Instance.new("Frame")
     frame.Name = properties.Name or "MainFrame"
