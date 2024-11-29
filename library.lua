@@ -171,7 +171,7 @@ function Lib.Window(Title)
 	LibraryTitle.Size = UDim2.new(0, 300, 0, 39)
 	LibraryTitle.ZIndex = 5
 	LibraryTitle.FontFace = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.ExtraBold, Enum.FontStyle.Normal);
-	LibraryTitle.Text = "UI Lib"
+	LibraryTitle.Text = "Z33N Hub"
 	LibraryTitle.TextColor3 = Color3.fromRGB(227, 227, 227)
 	LibraryTitle.TextScaled = true
 	LibraryTitle.TextSize = 37.000
