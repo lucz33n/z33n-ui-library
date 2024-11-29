@@ -42,7 +42,7 @@ function Lib:Drag(frame,parent)
 end
 
 function Lib.Window(Title)
-	Title = Title or "Ui Library"
+	Title = Title or "Z33N Hub"
 
 	local UiLib = Instance.new("ScreenGui")
 	local Main = Instance.new("Frame")
@@ -64,7 +64,7 @@ function Lib.Window(Title)
 
 	--Properties:
 
-	UiLib.Name = "UiLib"
+	UiLib.Name = "Z33N Hub"
 	UiLib.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 	UiLib.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
