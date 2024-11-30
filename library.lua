@@ -157,6 +157,30 @@ function Lib.Window(Title)
 	TopBar.Size = UDim2.new(0, 454, 0, 45)
 	TopBar.ZIndex = 5
 
+	local CloseButton = Instance.new("TextButton")
+	local CloseButtonCorner = Instance.new("UICorner")
+	
+	CloseButton.Name = "CloseButton"
+	CloseButton.Parent = TopBar
+	CloseButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+	CloseButton.BorderSizePixel = 0
+	CloseButton.Position = UDim2.new(0.92, 0, 0.1, 0) -- Top-right corner
+	CloseButton.Size = UDim2.new(0, 30, 0, 30) -- Small square button
+	CloseButton.ZIndex = 6
+	CloseButton.Font = Enum.Font.SourceSansBold
+	CloseButton.Text = "X"
+	CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+	CloseButton.TextSize = 20
+	
+	CloseButtonCorner.Name = "CloseButtonCorner"
+	CloseButtonCorner.CornerRadius = UDim.new(0, 5)
+	CloseButtonCorner.Parent = CloseButton
+	
+	CloseButton.MouseButton1Click:Connect(function()
+	    UiLib.Enabled = false
+	end)
+
+
 	TopCorner.CornerRadius = UDim.new(0, 15)
 	TopCorner.Name = "TopCorner"
 	TopCorner.Parent = TopBar
