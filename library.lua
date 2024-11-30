@@ -65,7 +65,8 @@ function Lib.Window(Title)
 	--Properties:
 
 	UiLib.Name = "Z33N Hub"
-	UiLib.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+	UiLib.Parent = game:GetService("CoreGui")
+
 	UiLib.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 	Main.Name = "Main"
