@@ -67,6 +67,12 @@ function Lib.Window(Title)
 	UiLib.Name = "Z33N Hub"
 	UiLib.Parent = game:GetService("CoreGui")
 
+	game.StarterGui:SetCore("SendNotification", { -- let the person know that f is to toggle
+	    Title = "F to toggle."; 
+	    Text = "Press F key to toggle the GUI."; 
+	    Duration = 3;
+	})
+
 	UiLib.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 	Main.Name = "Main"
@@ -115,6 +121,20 @@ function Lib.Window(Title)
 	UIListLayout.Padding = UDim.new(0, 19)
 	
 	Lib:Drag(TopBar,Main)
+
+	-- Keybind to toggle UI visibility
+	UIS.InputBegan:Connect(function(input, isProcessed)
+	    -- Check if the key pressed is 'F' and if the input is not processed by other elements
+	    if not isProcessed and input.KeyCode == Enum.KeyCode.F then
+	        UiLib.Enabled = not UiLib.Enabled -- Toggle visibility
+	        game.StarterGui:SetCore("SendNotification", {
+	            Title = "UI Toggle"; 
+	            Text = UiLib.Enabled and "GUI is now visible." or "GUI is now hidden."; 
+	            Duration = 2;
+	        })
+	    end
+	end)
+
 	
 	function Lib:ToggleUI()
 		if UiLib.Enabled then
